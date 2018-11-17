@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>GeneralFreezer</defName>
+    <label>General Freezer</label>
+    <filter>
+      <categories>
+        <li>Foods</li>
+        <li>PlantMatter</li>
+        <li>CorpsesHumanlike</li>
+        <li>CorpsesAnimal</li>
+      </categories>
+      <thingDefs>
+        <li>Ambrosia</li>
+        <li>Beer</li>
+        <li>Wort</li>
+      </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>GeneralFreezerNM</defName>
+    <label>General Freezer (no meals)</label>
+    <filter>
+      <categories>
+        <li>Foods</li>
+        <li>PlantMatter</li>
+        <li>CorpsesHumanlike</li>
+        <li>CorpsesAnimal</li>
+      </categories>
+      <disallowedCategories>
+        <li>FoodMeals</li>
+      </disallowedCategories>
+      <thingDefs>
+        <li>Ambrosia</li>
+        <li>Beer</li>
+        <li>Wort</li>
+      </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>Meals</defName>
+    <label>Meals</label>
+    <filter>
+      <categories>
+        <li>FoodMeals</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>GeneralStorage</defName>
+    <label>General Storage</label>
+    <filter>
+      <categories>
+        <li>Manufactured</li>
+        <li>ResourcesRaw</li>
+        <li>Items</li>
+        <li>Weapons</li>
+        <li>Apparel</li>
+        <li>Buildings</li>
+        <li>CorpsesMechanoid</li>
+        <li>Manufactured</li>
+      </categories>
+      <disallowedCategories>
+        <li>PlantMatter</li>
+      </disallowedCategories>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>GeneralMedical</defName>
+    <label>General Medical</label>
+    <filter>
+      <categories>
+        <li>Medicine</li>
+        <li>Drugs</li>
+        <li>BodyParts</li>
+      </categories>
+      <thingDefs>
+        <li>Neutroamine</li>
+      </thingDefs>
+      <disallowedThingDefs>
+        <li>Ambrosia</li>
+        <li>Beer</li>
+      </disallowedThingDefs>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>Drugs</defName>
+    <label>Drugs</label>
+    <filter>
+      <categories>
+        <li>Drugs</li>
+      </categories>
+      <thingDefs>
+        <li>Neutroamine</li>
+      </thingDefs>
+      <disallowedThingDefs>
+        <li>Ambrosia</li>
+        <li>Beer</li>
+      </disallowedThingDefs>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>MaterialsOutside</defName>
+    <label>Materials Outside</label>
+    <filter>
+      <categories>
+        <li>StoneBlocks</li>
+      </categories>
+      <thingDefs>
+        <li>Plasteel</li>
+        <li>Silver</li>
+        <li>Steel</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>Materials</defName>
+    <label>Materials</label>
+    <filter>
+      <categories>
+        <li>ResourcesRaw</li>
+        <li>PlantMatter</li>
+      </categories>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>VariousOthers</defName>
+    <label>VariousOthers</label>
+    <filter>
+      <categories>
+        <li>Manufactured</li>
+        <li>Items</li>
+        <li>Weapons</li>
+        <li>Apparel</li>
+        <li>Buildings</li>
+        <li>CorpsesMechanoid</li>
+      </categories>
+      <disallowedCategories>
+        <li>Medicine</li>
+        <li>Drugs</li>
+        <li>BodyParts</li>
+      </disallowedCategories>
+      <disallowedThingDefs>
+        <li>Neutroamine</li>
+        <li>Wort</li>
+      </disallowedThingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowDeadmansApparel</li>
+      </specialFiltersToDisallow>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>Shells</defName>
+    <label>Shells</label>
+    <filter>
+      <categories>
+        <li>MortarShells</li>
+      </categories>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>Weapons</defName>
+    <label>Weapons</label>
+    <filter>
+      <categories>
+        <li>Weapons</li>
+      </categories>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>CleanApparel</defName>
+    <label>Clean Apparel</label>
+    <filter>
+      <categories>
+        <li>Apparel</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowDeadmansApparel</li>
+      </specialFiltersToDisallow>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>TaintedApparel</defName>
+    <label>Tainted Apparel</label>
+    <filter>
+      <categories>
+        <li>Apparel</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowNonDeadmansApparel</li>
+      </specialFiltersToDisallow>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>Chunks</defName>
+    <label>Chunks</label>
+    <filter>
+      <categories>
+        <li>Chunks</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowNonDeadmansApparel</li>
+      </specialFiltersToDisallow>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>Rotting</defName>
+    <label>Rotting</label>
+    <filter>
+      <categories>
+        <li>Apparel</li>
+        <li>CorpsesHumanlike</li>
+        <li>CorpsesAnimal</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowFresh</li>
+        <li>AllowNonDeadmansApparel</li>
+      </specialFiltersToDisallow>
+    </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+</Defs>
