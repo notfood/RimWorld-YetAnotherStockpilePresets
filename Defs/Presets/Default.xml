@@ -223,9 +223,6 @@
       <categories>
         <li>Chunks</li>
       </categories>
-      <specialFiltersToDisallow>
-        <li>AllowNonDeadmansApparel</li>
-      </specialFiltersToDisallow>
     </filter>
   </YetAnotherStockpilePresets.StockpilePresetDef>
   
@@ -243,5 +240,16 @@
         <li>AllowNonDeadmansApparel</li>
       </specialFiltersToDisallow>
     </filter>
+  </YetAnotherStockpilePresets.StockpilePresetDef>
+  
+  <YetAnotherStockpilePresets.StockpilePresetDef>
+    <defName>Perishables</defName>
+    <label>Perishables</label>
+    <filter>
+      <categories>
+        <li>Root</li>
+      </categories>
+    </filter>
+    <filterPerishables>true</filterPerishables>
   </YetAnotherStockpilePresets.StockpilePresetDef>
 </Defs>
