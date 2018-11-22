@@ -11,19 +11,12 @@ namespace YetAnotherStockpilePresets
     public class Command_StorageSettingsPresets : Command
     {
         static readonly Texture2D StoragePresetsTex = ContentFinder<Texture2D>.Get("UI/Commands/StorageSettingsPresets", true);
-        static readonly Dictionary<string, ThingFilter> dictionary;
 
         static Command_StorageSettingsPresets() {
-            
-            dictionary = new Dictionary<string, ThingFilter>();
-            foreach(var def in DefDatabase<StockpilePresetDef>.AllDefs) {
-                dictionary.Add(def.label, def.filter);
-            }
-
             HarmonyInstance.Create("rimworld.notfood.yasp").PatchAll(System.Reflection.Assembly.GetExecutingAssembly());
         }
 
-        readonly FloatMenu menu;
+        readonly ThingFilter filter;
 
         public Command_StorageSettingsPresets(Zone_Stockpile stockpile)
         {
@@ -32,23 +25,20 @@ namespace YetAnotherStockpilePresets
             defaultLabel = ResourceBank.Label;
             defaultDesc = ResourceBank.Description;
 
-            menu = BuildFloatMenu(stockpile.settings.filter);
-        }
-
-        static FloatMenu BuildFloatMenu(ThingFilter filter) {
-            var list = new List<FloatMenuOption>();
-            foreach (var key in dictionary.Keys) {
-                list.Add(new FloatMenuOption(key, delegate {
-                    filter.CopyAllowancesFrom(dictionary[key]);
-                }));
-            }
-            return new FloatMenu(list);
+            filter = stockpile.settings.filter;
         }
 
         public override void ProcessInput(Event ev)
         {
             base.ProcessInput(ev);
-            Find.WindowStack.Add(menu);
+            var list = new List<FloatMenuOption>();
+            foreach (var def in DefDatabase<StockpilePresetDef>.AllDefs)
+            {
+                list.Add(new FloatMenuOption(def.label, delegate {
+                    filter.CopyAllowancesFrom(def.filter);
+                }));
+            }
+            Find.WindowStack.Add(new FloatMenu(list));
         }
     }
 
