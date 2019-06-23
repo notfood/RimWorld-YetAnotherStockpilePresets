@@ -16,7 +16,7 @@ namespace YetAnotherStockpilePresets
             HarmonyInstance.Create("rimworld.notfood.yasp").PatchAll(System.Reflection.Assembly.GetExecutingAssembly());
         }
 
-        readonly ThingFilter filter;
+        readonly Zone_Stockpile stockpile;
 
         public Command_StorageSettingsPresets(Zone_Stockpile stockpile)
         {
@@ -25,7 +25,7 @@ namespace YetAnotherStockpilePresets
             defaultLabel = ResourceBank.Label;
             defaultDesc = ResourceBank.Description;
 
-            filter = stockpile.settings.filter;
+            this.stockpile = stockpile;
         }
 
         public override void ProcessInput(Event ev)
@@ -35,10 +35,15 @@ namespace YetAnotherStockpilePresets
             foreach (var def in DefDatabase<StockpilePresetDef>.AllDefs)
             {
                 list.Add(new FloatMenuOption(def.label, delegate {
-                    filter.CopyAllowancesFrom(def.filter);
+                    CopyIntoFilterFromTemplate(stockpile, def);
                 }));
             }
             Find.WindowStack.Add(new FloatMenu(list));
+        }
+
+        internal static void CopyIntoFilterFromTemplate(Zone_Stockpile stockpile, StockpilePresetDef def)
+        {
+            stockpile.settings.filter.CopyAllowancesFrom(def.filter);
         }
     }
 

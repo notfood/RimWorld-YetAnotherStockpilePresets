@@ -231,7 +231,6 @@
     <label>Rotting</label>
     <filter>
       <categories>
-        <li>Apparel</li>
         <li>CorpsesHumanlike</li>
         <li>CorpsesAnimal</li>
       </categories>
