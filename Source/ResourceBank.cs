@@ -2,7 +2,6 @@
 
 namespace YetAnotherStockpilePresets
 {
-    [StaticConstructorOnStartup]
     public static class ResourceBank
     {
         static string TL(string s) => s.Translate();

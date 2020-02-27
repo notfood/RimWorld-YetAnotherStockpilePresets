@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-using Harmony;
+using HarmonyLib;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -13,7 +13,7 @@ namespace YetAnotherStockpilePresets
         static readonly Texture2D StoragePresetsTex = ContentFinder<Texture2D>.Get("UI/Commands/StorageSettingsPresets", true);
 
         static Command_StorageSettingsPresets() {
-            HarmonyInstance.Create("rimworld.notfood.yasp").PatchAll(System.Reflection.Assembly.GetExecutingAssembly());
+            new Harmony("rimworld.notfood.yasp").PatchAll();
         }
 
         readonly Zone_Stockpile stockpile;
@@ -49,11 +49,11 @@ namespace YetAnotherStockpilePresets
 
     [HarmonyPatch (typeof(Zone_Stockpile))]
     [HarmonyPatch (nameof(Zone_Stockpile.GetGizmos))]
-    public class Zone_Stockpile_GetGizmos_Patch
+    public static class Zone_Stockpile_GetGizmos_Patch
     {
         public static void Postfix(Zone_Stockpile __instance, ref IEnumerable<Gizmo> __result)
         {
-            __result = __result.Add(new Command_StorageSettingsPresets(__instance));
+            __result = __result.AddItem(new Command_StorageSettingsPresets(__instance));
         }
     }
 }

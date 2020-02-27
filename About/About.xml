@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
+  <packageId>notfood.YASP</packageId>
 	<name>Yet Another Stockpile Presets</name>
 	<author>notfood</author>
 	<url>https://github.com/notfood/RimWorld-YetAnotherStockpilePresets</url>
-	<supportedVersions><li>1.0</li></supportedVersions>
+	<supportedVersions>
+		<li>1.1</li>
+	</supportedVersions>
 	<description>
 &lt;size=20&gt;Yet Another Stockpile Presets&lt;/size&gt;
 
